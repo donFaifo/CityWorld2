@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditCityActivity">
+
+    <EditText
+        android:id="@+id/cityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="City name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityImage" />
+
+    <ImageView
+        android:id="@+id/cityImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/city_placeholder_foreground" />
+
+    <EditText
+        android:id="@+id/cityImageUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Image URL"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/prevButton"
+        app:layout_constraintStart_toStartOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/ic_menu_view"
+        app:layout_constraintEnd_toEndOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+    <EditText
+        android:id="@+id/cityDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/cityName"
+        app:layout_constraintStart_toStartOf="@+id/cityImageUrl"
+        app:layout_constraintTop_toBottomOf="@+id/cityImageUrl" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:numStars="5"
+        android:progressTint="@color/colorPrimary"
+        android:rating="3"
+        android:stepSize=".5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>
